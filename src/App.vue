@@ -4,14 +4,14 @@
 </template>
 
 <script>
-import MainNav from './components/MainNav.vue'
-import TheHero from './components/TheHero.vue'
+import MainNav from "@/components/MainNav.vue";
+import TheHero from "@/components/TheHero.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     MainNav,
-    TheHero
-  }
-}
+    TheHero,
+  },
+};
 </script>
