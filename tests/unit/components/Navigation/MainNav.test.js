@@ -1,7 +1,8 @@
 import { render, screen } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
+import { RouterLinkStub } from "@vue/test-utils";
 
-import MainNav from "@/components/MainNav.vue";
+import MainNav from "@/components/Navigation/MainNav.vue";
 
 describe("MainNav", () => {
   const renderMainNav = () => {
@@ -9,6 +10,7 @@ describe("MainNav", () => {
       global: {
         stubs: {
           FontAwesomeIcon: true,
+          RouterLink: RouterLinkStub,
         },
       },
     });
@@ -16,7 +18,7 @@ describe("MainNav", () => {
 
   it("displays company name", () => {
     renderMainNav();
-    const companyName = screen.getByText("Bobo Careers");
+    const companyName = screen.getByText("BOBO Careers");
     expect(companyName).toBeInTheDocument();
   });
 

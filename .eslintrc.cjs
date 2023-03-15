@@ -7,10 +7,11 @@ module.exports = {
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
     "@vue/eslint-config-prettier",
-    "plugin:vitest-globals/recommended",
+    "plugin:prettier/recommended",
   ],
   parserOptions: {
     ecmaVersion: "latest",
+    parser: "babel-eslint",
   },
   env: {
     "vitest-globals/env": true,
